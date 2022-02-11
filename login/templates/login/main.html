@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+	
+</head>
+<body >
+	{% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags}}">
+			<center>
+            {{ message }}
+		</center>
+        </div>
+		{% endfor %}
+	{% endif %}
+	{% block content %}
+	<div class="container-fluid banner">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-md">
+					<div class="navbar-brand">Tender</div>
+					<ul class="nav">
+						
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-8 offset-md-2 info">
+				<h1 class="text-center">TENDER MANAGEMENT SYSTEM</h1>
+				<p class="text-center">
+					Welcome to our website
+				</p>
+				<a href="login" class="btn btn-md text-center">Get Started</a>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+</body>
+<style>
+	body{
+	margin:0;
+	padding:0;
+	/* background:#fff; */
+	font-family: 'Raleway',sans-serif;
+	background-color: rgb(38, 140, 165);
+	/* color: #fff; */
+}
+.banner{
+	height: 100vh;
+	width: 100%;
+	/*
+	background:url('/static/css/banner.jpg'),url("/static/css/banner.jpg");
+	background-position: top;
+	background-size:cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat; */
+	background-color: rgb(38, 140, 165);
+}
+.banner .navbar{
+	margin-top:4%;
+}
+.banner .navbar-brand{
+	color: #fff;
+	font-size:1.8em;
+	font-weight: 700;
+	margin-left: 10%;
+}
+.banner .nav{
+	margin-right:10%; 
+}
+.banner .nav li a{
+	color:#aaa;
+	font-size: 1.2em;
+}
+.banner .info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+.banner .info h1{
+	font-size: 2.5em;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+}
+.banner .info p{
+	font-size: 2em;
+	font-weight: 500;
+	color: #aaa;
+	letter-spacing: 2px;
+}
+.banner .info a{
+	margin-left:50%;
+	transform: translateX(-50%);
+	color: #fff;
+	background: #e91d43;
+	padding:10px 20px; 
+	font-size: 1em;
+	font-weight: 600;
+}
+.banner .info a:hover{
+	background: #e91e63;
+}
+a:link {
+  text-decoration: none;
+}
+
+.tender-box{
+    width: 450px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.87);
+    padding: 15px 40px 40px;
+    border: 1px solid rgb(2, 69, 114);
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+</style>
+</html>

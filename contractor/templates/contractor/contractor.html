@@ -1,0 +1,211 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+	
+</head>
+<body >
+	<div class="container-fluid banner">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-md">
+					<div class="navbar-brand">Contractor Portal</div>
+					<ul class="nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'profile'%}">Profile <span class="sr-only">(current)</span></a>
+                        </li>
+						<li class="nav-item active">
+                            <a class="nav-link" href="{% url 'register-tender'%}">Generate Tender <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'tender-list'%}">All Tenders <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'allbiddings' %}">All Biddings <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'logout'%}">Logout <span class="sr-only">(current)</span></a>
+                        </li>
+					</ul>
+				</nav>
+			</div>
+            
+		</div>
+        {% block content1 %}
+        {% endblock %}
+        {% block content%}
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <h2 style="color: white;"><center>Welcome {{request.user}}</center></h2>
+        {% endblock %}
+	</div>
+    
+</body>
+<style>
+	body{
+	margin:0;
+	padding:0;
+	/* background:#fff; */
+	font-family: 'Raleway',sans-serif;
+	background-color: rgb(38, 140, 165);
+	/* color: #fff; */
+}
+.test {
+  width: 140px;
+  height: 120px;
+  background-color: black;
+}
+.banner{
+	height: 100vh;
+	width: 100%;
+	/*
+	background:url('/static/css/banner.jpg'),url("/static/css/banner.jpg");
+	background-position: top;
+	background-size:cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat; */
+	background-color: rgb(38, 140, 165);
+}
+.banner .navbar{
+	margin-top:4px;
+}
+.banner .navbar-brand{
+	color: #fff;
+	font-size:1.8em;
+	font-weight: 700;
+	margin-left: 10%;
+}
+.banner .nav{
+	margin-right:10%; 
+}
+.banner .nav li a{
+	color:rgb(238, 230, 230);
+	font-size: 1.2em;
+}
+.banner .info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+.banner .info h1{
+	font-size: 2.5em;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+}
+.banner .info p{
+	font-size: 2em;
+	font-weight: 500;
+	color: #aaa;
+	letter-spacing: 2px;
+}
+.banner .info a{
+	margin-left:50%;
+	transform: translateX(-50%);
+	color: #fff;
+	background: #e91d43;
+	padding:10px 20px; 
+	font-size: 1em;
+	font-weight: 600;
+}
+.banner .info a:hover{
+	background: #e91e63;
+}
+
+form {
+    width: 330px;
+    height: 470px;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+
+.tender-box{
+    width: 900px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.87);
+    padding: 15px 40px 40px;
+    border: 1px solid rgb(2, 69, 114);
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+
+.tender-box1{
+    width: 900px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.87);
+    padding: 15px 40px 40px;
+    border: 1px solid rgb(2, 69, 114);
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px
+}
+label i {
+    color: #999;
+    font-size: 80%;
+}
+input, select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.row {
+    padding-bottom: 10px;
+}
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+.form-inline label, .form-inline input {
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+.error {
+    color: red;
+    font-size: 90%;
+}
+input[type="submit"] {
+    width:45%;
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #0165b6;
+}
+input[type="reset"] {
+    width:45%;
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+input[type="reset"]:hover {
+    background: #0165b6;
+}
+input[type="submit"],input[type="reset"]{
+    display: inline-block;
+}
+</style>
+</html>

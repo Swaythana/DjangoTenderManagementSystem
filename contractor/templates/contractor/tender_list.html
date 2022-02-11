@@ -1,0 +1,10 @@
+{% extends "contractor/contractor.html" %}
+{% block content %}
+{% for instance in data %}
+<div class="tender-box">
+<h4><b>{{instance.Tendername}}</b></h4>
+<h5>Base Price : {{instance.Baseprice}}</h5>
+<h5>Deadline : {{instance.Deadline}}</h5>
+</div>
+{% endfor %}
+{% endblock %}

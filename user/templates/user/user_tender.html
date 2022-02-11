@@ -1,0 +1,11 @@
+{% extends "user/userhome.html" %}
+{% block content %}
+{% for instance in tenders %}
+<div class="tender-box">
+<h4><b>{{instance.Tendername}}</b></h4>
+<h5>Base Price : {{instance.Baseprice}}</h5>
+<h5>Deadline : {{instance.Deadline}}</h5>
+<a href="../../user/registerusertender/{{instance.Tendername}}/{{instance.ContractorName}}/{{instance.Baseprice}}">Register</a>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'login/base.html' %}
+{% block content %}
+<div class="log">
+<h3>Logged out successfully</h3>
+<a href="/">Login again?</a>
+</div>
+<style>
+    .log{
+    width: 500px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.87);
+    padding: 15px 40px 40px;
+    border: 1px solid rgb(2, 69, 114);
+    margin: 200px auto 0;
+    border-radius: 5px;
+    text-align: center;
+}
+</style>
+{% endblock %}

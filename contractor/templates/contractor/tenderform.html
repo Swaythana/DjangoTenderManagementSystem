@@ -1,0 +1,12 @@
+{% extends 'contractor/contractor.html' %}
+{% block content1 %}
+<br/>
+<h3 style="color: rgba(255, 255, 255, 0.856); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Register Tender</h3>
+{% endblock %}
+{% block content %}
+        <form action="." method='POST'>{% csrf_token %}
+            {{form.as_p}}
+        <input type="submit" value="Submit">&nbsp;&nbsp;
+        <input type="reset" value="Reset">
+        </form>
+{% endblock %}

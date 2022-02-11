@@ -1,0 +1,10 @@
+{% extends "user/userhome.html" %}
+{% block content %}
+{% for instance in data %}
+<div class="tender-box">
+<h4><b>{{instance.Tendername}}</b></h4>
+<h5>Deadline : {{instance.Contractorname}}</h5>
+<h5>Bid Price : {{instance.Bidprice}}</h5>
+</div>
+{% endfor %}
+{% endblock %}
